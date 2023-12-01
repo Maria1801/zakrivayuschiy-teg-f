@@ -123,6 +123,8 @@
   padding-right: 25px;
   margin-bottom: -40px;
   margin-top: 28px;
+  z-index: 2;
+  position: relative;
 }
 
 .image {
@@ -206,4 +208,52 @@
 .gialog_ikon {
   width: 39px;
   height: 39px;
+}
+
+.image1 {
+  filter: sepia(100%);
+  z-index: 1;
+  position: relative;
+}
+
+.image2 {
+  filter: invert(100%);
+  z-index: 1;
+  position: relative;
+}
+
+.image3 {
+  filter: saturate(165%);
+  z-index: 1;
+  position: relative;
+}
+
+.image4 {
+  filter: opacity(50%);
+  z-index: 1;
+  position: relative;
+}
+
+.image5 {
+  filter: blur(2px);
+  z-index: 1;
+  position: relative;
+}
+
+.image6 {
+  filter: brightness(150%);
+  z-index: 1;
+  position: relative;
+}
+
+.image7 {
+  filter: hue-rotate(90deg);
+  z-index: 1;
+  position: relative;
+}
+
+.image8 {
+  filter: sepia(1) contrast(2) brightness(100%);
+  z-index: 1;
+  position: relative;
 }
