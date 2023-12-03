@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
     <title>Закрывающий тег</title>
-    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
-    <!-- <link rel="icon" href="./svg/floppy.svg" type="svg+xml" /> -->
+    <link rel="icon" href="svg/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -95,7 +94,7 @@
                   <path
                     class="contour"
                     d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                    fill="var(--accent-color)"
+                    fill="var(--color)"
                   />
                   <path
                     class="main-body"
@@ -111,11 +110,13 @@
                 <path
                   class="sparks"
                   d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                  fill="var(--heart-fill-color)"
+                  fill="#FF0000"
                 />
               </svg>
             </button>
-            <button class="card_button">Like</button>
+            <button class="card__like-button">
+              <span class="button__text">Like</span>
+            </button>
           </div>
         </li>
         <li class="card-wrapper-list">
@@ -301,23 +302,511 @@
       onclick="window['dialog'].showModal()"
       aria-controls="dialog"
     >
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <use href="./svg/floppy.svg#floppy"></use>
+      <svg class="floppy_first button__text" xmlns="http://www.w3.org/2000/svg">
+        <use href="#floppy"></use>
       </svg>
-      <span>Сохранить на память</span>
+      <!-- <button class="card__like-button">
+        <span class="button__text">Like</span>
+      </button> -->
+      <span class="button__text">Сохранить на память</span>
     </button>
   </section>
   <dialog class="dialog" id="dialog">
     <div class="dialog_wrapper">
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <use href="./svg/floppy.svg#floppy"></use>
+      <svg
+        class="floppy_second"
+        width="80"
+        height="80"
+        viewBox="0 0 40 40"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use class="transform" href="#floppy"></use>
       </svg>
       <p class="text_dialog">
-        Вставьте дискету,<br />
-        чтобы<br />
-        продолжить
+        ВСТАВЬТЕ ДИСКЕТУ,<br />
+        ЧТОБЫ<br />
+        ПРОДОЛЖИТЬ
       </p>
     </div>
-    <button class="dialog_button" onclick="window['dialog'].close()">ок</button>
+    <button class="dialog_button" onclick="window['dialog'].close()">
+      <span class="button__text">ok</span>
+    </button>
   </dialog>
 </html>
+
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="floppy" fill="currentColor">
+    <rect width="1.61538" height="1.61538" />
+    <rect y="1.61536" width="1.61538" height="1.61538" />
+    <rect y="3.23077" width="1.61538" height="1.61538" />
+    <rect y="4.84613" width="1.61538" height="1.61538" />
+    <rect y="6.46155" width="1.61538" height="1.61538" />
+    <rect y="8.0769" width="1.61538" height="1.61538" />
+    <rect y="9.69232" width="1.61538" height="1.61538" />
+    <rect y="11.3077" width="1.61538" height="1.61538" />
+    <rect y="12.9231" width="1.61538" height="1.61538" />
+    <rect y="14.5385" width="1.61538" height="1.61538" />
+    <rect y="16.1539" width="1.61538" height="1.61538" />
+    <rect y="17.7692" width="1.61538" height="1.61538" />
+    <rect y="19.3846" width="1.61538" height="1.61538" />
+    <rect
+      x="17.7692"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 17.7692 0)"
+    />
+    <rect
+      x="16.1539"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 16.1539 0)"
+    />
+    <rect
+      x="14.5385"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 14.5385 0)"
+    />
+    <rect
+      x="12.9231"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 12.9231 0)"
+    />
+    <rect
+      x="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 11.3077 0)"
+    />
+    <rect
+      x="9.69232"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 9.69232 0)"
+    />
+    <rect
+      x="8.0769"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 8.0769 0)"
+    />
+    <rect
+      x="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 6.46155 0)"
+    />
+    <rect
+      x="4.84613"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 0)"
+    />
+    <rect
+      x="3.23077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 3.23077 0)"
+    />
+    <rect
+      x="19.3846"
+      y="1.61536"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 19.3846 1.61536)"
+    />
+    <rect
+      x="4.84613"
+      y="3.23077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 3.23077)"
+    />
+    <rect
+      x="4.84613"
+      y="1.61536"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 1.61536)"
+    />
+    <rect
+      x="4.84613"
+      y="4.84613"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 4.84613)"
+    />
+    <rect
+      x="16.1539"
+      y="3.23077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 16.1539 3.23077)"
+    />
+    <rect
+      x="16.1539"
+      y="1.61536"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 16.1539 1.61536)"
+    />
+    <rect
+      x="16.1539"
+      y="4.84613"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 16.1539 4.84613)"
+    />
+    <rect
+      x="12.9231"
+      y="3.23077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 12.9231 3.23077)"
+    />
+    <rect
+      x="12.9231"
+      y="1.61536"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 12.9231 1.61536)"
+    />
+    <rect
+      x="12.9231"
+      y="4.84613"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 12.9231 4.84613)"
+    />
+    <rect
+      x="16.1539"
+      y="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 16.1539 6.46155)"
+    />
+    <rect
+      x="14.5385"
+      y="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 14.5385 6.46155)"
+    />
+    <rect
+      x="12.9231"
+      y="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 12.9231 6.46155)"
+    />
+    <rect
+      x="11.3077"
+      y="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 11.3077 6.46155)"
+    />
+    <rect
+      x="9.69232"
+      y="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 9.69232 6.46155)"
+    />
+    <rect
+      x="8.0769"
+      y="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 8.0769 6.46155)"
+    />
+    <rect
+      x="6.46155"
+      y="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 6.46155 6.46155)"
+    />
+    <rect
+      x="4.84613"
+      y="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 6.46155)"
+    />
+    <rect
+      x="17.7692"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 17.7692 11.3077)"
+    />
+    <rect
+      x="16.1539"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 16.1539 11.3077)"
+    />
+    <rect
+      x="14.5385"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 14.5385 11.3077)"
+    />
+    <rect
+      x="12.9231"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 12.9231 11.3077)"
+    />
+    <rect
+      x="11.3077"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 11.3077 11.3077)"
+    />
+    <rect
+      x="9.69232"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 9.69232 11.3077)"
+    />
+    <rect
+      x="8.0769"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 8.0769 11.3077)"
+    />
+    <rect
+      x="6.46155"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 6.46155 11.3077)"
+    />
+    <rect
+      x="4.84613"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 11.3077)"
+    />
+    <rect
+      x="17.7692"
+      y="12.9231"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 17.7692 12.9231)"
+    />
+    <rect
+      x="4.84613"
+      y="12.9231"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 12.9231)"
+    />
+    <rect
+      x="17.7692"
+      y="14.5385"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 17.7692 14.5385)"
+    />
+    <rect
+      x="4.84613"
+      y="14.5385"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 14.5385)"
+    />
+    <rect
+      x="17.7692"
+      y="16.1539"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 17.7692 16.1539)"
+    />
+    <rect
+      x="4.84613"
+      y="16.1539"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 16.1539)"
+    />
+    <rect
+      x="4.84613"
+      y="17.7692"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 17.7692)"
+    />
+    <rect
+      x="17.7692"
+      y="17.7692"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 17.7692 17.7692)"
+    />
+    <rect
+      x="19.3846"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 19.3846 19.3846)"
+    />
+    <rect
+      x="17.7692"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 17.7692 19.3846)"
+    />
+    <rect
+      x="16.1539"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 16.1539 19.3846)"
+    />
+    <rect
+      x="14.5385"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 14.5385 19.3846)"
+    />
+    <rect
+      x="12.9231"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 12.9231 19.3846)"
+    />
+    <rect
+      x="11.3077"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 11.3077 19.3846)"
+    />
+    <rect
+      x="9.69232"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 9.69232 19.3846)"
+    />
+    <rect
+      x="8.0769"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 8.0769 19.3846)"
+    />
+    <rect
+      x="6.46155"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 6.46155 19.3846)"
+    />
+    <rect
+      x="4.84613"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 4.84613 19.3846)"
+    />
+    <rect
+      x="3.23077"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(90 3.23077 19.3846)"
+    />
+    <rect
+      x="21"
+      y="21"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 21)"
+    />
+    <rect
+      x="21"
+      y="19.3846"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 19.3846)"
+    />
+    <rect
+      x="21"
+      y="17.7692"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 17.7692)"
+    />
+    <rect
+      x="21"
+      y="16.1539"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 16.1539)"
+    />
+    <rect
+      x="21"
+      y="14.5385"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 14.5385)"
+    />
+    <rect
+      x="21"
+      y="12.9231"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 12.9231)"
+    />
+    <rect
+      x="21"
+      y="11.3077"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 11.3077)"
+    />
+    <rect
+      x="21"
+      y="9.69232"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 9.69232)"
+    />
+    <rect
+      x="21"
+      y="8.0769"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 8.0769)"
+    />
+    <rect
+      x="21"
+      y="6.46155"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 6.46155)"
+    />
+    <rect
+      x="21"
+      y="4.84613"
+      width="1.61538"
+      height="1.61538"
+      transform="rotate(-180 21 4.84613)"
+    />
+  </symbol>
+</svg>
