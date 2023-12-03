@@ -536,7 +536,7 @@
       <button
         class="button-footer"
         type="button"
-        onclick="window['dialog'].showModal()"
+        onclick="window.dialog.showModal()"
         aria-controls="dialog"
       >
         <svg
@@ -566,12 +566,9 @@
           ПРОДОЛЖИТЬ
         </p>
       </div>
-      <!-- <button class="dialog_button" onclick="window['dialog'].close()"> -->
-      <form>
-        <button type="submit" class="dialog_button">
-          <span class="button__text">OK</span>
-        </button>
-      </form>
+      <button class="dialog_button" onclick="window.dialog.close()">
+        <span class="button__text">OK</span>
+      </button>
     </dialog>
     <script src="./scripts/like.js"></script>
   </body>
