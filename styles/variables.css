@@ -1,9 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --background-color: #000;;
   --font: "Inter";
   --variable-font: "Press Start 2P";
+  --background-color: #000;
   --font-variation-wght: 400;
   --color: #00cc14;
   --background-image: repeating-linear-gradient(

@@ -156,27 +156,33 @@
   margin-bottom: 57px;
 }
 
-.image-label {
-  font-family: PressStart2P;
-  font-size: 14px;
-  opacity: 0.5;
-  text-align: right;
-  padding-right: 25px;
-  margin-bottom: -40px;
-  margin-top: 28px;
-  z-index: 2;
-  position: relative;
-  -webkit-text-stroke: 1px var(--background-color);
-  mix-blend-mode: hard-light;
+@supports (-webkit-text-stroke: 1px var(--background-color)) {
+  .image-label {
+    font-family: PressStart2P;
+    font-size: 14px;
+    opacity: 0.5;
+    text-align: right;
+    padding-right: 25px;
+    margin-bottom: -40px;
+    margin-top: 28px;
+    z-index: 2;
+    position: relative;
+    -webkit-text-stroke: 1px var(--background-color);
+    mix-blend-mode: hard-light;
+  }
 }
+
 .image_wrapper {
   border-top: 2px solid var(--color);
   border-bottom: 2px solid var(--color);
+  position: relative;
 }
 
 .image {
   width: 100%;
   max-height: 100%;
+  background-size: cover;
+  margin-bottom: -4px;
 }
 
 .card__title {
@@ -189,7 +195,6 @@
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 27px;
-  /* border-top: 2px solid var(--color); */
 }
 
 .info-second {
@@ -213,6 +218,18 @@
   color: var(--color, #000);
   background: var(--background-color, #fff);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  @media (width <= 375px) {
+    display: flex;
+    flex-direction: column;
+    width: 306px;
+    height: 80px;
+    padding-top: 8px;
+    gap: 8px;
+  }
 }
 
 .button-footer:focus-visible {
@@ -300,7 +317,6 @@
   transition: width 0.5s, background-color 0.5s ease-in-out;
 }
 
-
 .dialog {
   display: flex;
   flex-direction: column;
@@ -370,7 +386,7 @@
 .floppy_first {
   color: var(--color);
   width: 21px;
-  height: 21px;
+  height: 25px;
   @media (width <= 375px) {
     width: 28px;
     height: 28px;
@@ -463,5 +479,5 @@
   font-family: PressStart2P;
   font-size: 14px;
   font-style: normal;
-  line-height: 12.6px;
+  /* line-height: 12.6px; */
 }
