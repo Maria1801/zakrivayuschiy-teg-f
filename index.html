@@ -533,43 +533,43 @@
       </ul>
     </main>
     <script src="./scripts/like.js"></script>
+    <footer class="footer">
+      <button
+        class="button-footer"
+        type="button"
+        onclick="window['dialog'].showModal()"
+        aria-controls="dialog"
+      >
+        <svg
+          viewBox="0 0 21 21"
+          class="floppy_first button__text"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="/svg/floppy.svg#floppy"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+    </footer>
+    <dialog class="dialog" id="dialog">
+      <div class="dialog_wrapper">
+        <svg
+          class="floppy_second"
+          width="80"
+          height="80"
+          viewBox="0 0 40 40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use class="transform" href="/svg/floppy.svg#floppy"></use>
+        </svg>
+        <p class="text_dialog">
+          ВСТАВЬТЕ ДИСКЕТУ,<br />
+          ЧТОБЫ<br />
+          ПРОДОЛЖИТЬ
+        </p>
+      </div>
+      <button class="dialog_button" onclick="window['dialog'].close()">
+        <span class="button__text">ok</span>
+      </button>
+    </dialog>
   </body>
-  <footer class="footer">
-    <button
-      class="button-footer"
-      type="button"
-      onclick="window['dialog'].showModal()"
-      aria-controls="dialog"
-    >
-      <svg
-        viewBox="0 0 21 21"
-        class="floppy_first button__text"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use href="/svg/floppy.svg#floppy"></use>
-      </svg>
-      <span class="button__text">Сохранить на память</span>
-    </button>
-  </footer>
-  <dialog class="dialog" id="dialog">
-    <div class="dialog_wrapper">
-      <svg
-        class="floppy_second"
-        width="80"
-        height="80"
-        viewBox="0 0 40 40"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use class="transform" href="/svg/floppy.svg#floppy"></use>
-      </svg>
-      <p class="text_dialog">
-        ВСТАВЬТЕ ДИСКЕТУ,<br />
-        ЧТОБЫ<br />
-        ПРОДОЛЖИТЬ
-      </p>
-    </div>
-    <button class="dialog_button" onclick="window['dialog'].close()">
-      <span class="button__text">ok</span>
-    </button>
-  </dialog>
 </html>
