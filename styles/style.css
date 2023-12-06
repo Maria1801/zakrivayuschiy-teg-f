@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font);
+  font-family: var(--main-font);
   font-variation-settings: "wght" var(--font-variation-wght);
   background-color: var(--background-color);
   display: flex;
@@ -190,19 +190,11 @@
   padding-left: 10px;
 }
 
-.info-first {
+.info {
   font-size: 18px;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 27px;
-}
-
-.info-second {
-  font-size: 18px;
-  padding-top: 27px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 
 .footer {
@@ -210,55 +202,21 @@
 }
 
 .button-footer {
-  position: relative;
   width: 335px;
   height: 51px;
   margin-bottom: 105px;
-  border: 2px solid var(--color, #000);
-  color: var(--color, #000);
-  background: var(--background-color, #fff);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  background-color: var(--background-color);
   gap: 8px;
-  justify-content: center;
   @media (width <= 375px) {
-    display: flex;
     flex-direction: column;
     width: 306px;
     height: 80px;
     padding-top: 8px;
-    gap: 8px;
   }
 }
 
-.button-footer:focus-visible {
-  border: 2px solid var(--color, #000);
-  box-shadow: 2px 2px 0px var(--color, #000);
-  outline: none;
-  transition: box-shadow ease 0.3s;
-}
-
 .button-footer::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 0%;
   height: 49px;
-  background-color: var(--color, #000);
-  transition: none;
-}
-
-.button-footer:hover .button__text {
-  color: var(--background-color);
-  animation: text ease-in-out 0.5s;
-}
-
-.button-footer:hover::after {
-  width: 100%;
-  background-color: var(--color, #000);
-  transition: width 0.5s, background-color 0.5s ease-in-out;
 }
 
 .text_dialog {
@@ -281,44 +239,15 @@
 }
 
 .dialog_button {
-  position: relative;
-  border: 2px solid var(--color);
   background: var(--background-color);
   font-family: PressStart2P;
   font-size: 14px;
-  color: var(--color);
   width: clamp(257px, 5vw, 293px);
   height: 38px;
-  cursor: pointer;
-}
-
-.dialog_button:focus-visible {
-  border: 2px solid var(--color, #000);
-  box-shadow: 2px 2px 0px var(--color, #000);
-  outline: none;
-  transition: box-shadow ease 0.3s;
 }
 
 .dialog_button::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 0%;
   height: 35px;
-  background-color: var(--color, #000);
-  transition: none;
-}
-
-.dialog_button:hover .button__text {
-  color: var(--background-color);
-  animation: text ease-in-out 0.5s;
-}
-
-.dialog_button:hover::after {
-  width: 100%;
-  background-color: var(--color, #000);
-  transition: width 0.5s, background-color 0.5s ease-in-out;
 }
 
 .dialog {
@@ -331,17 +260,10 @@
   @media (width <= 375px) {
     width: 341px;;
   }
-
 }
 
 .dialog:not([open]) {
   display: none;
-}
-
-.gialog_ikon {
-  width: 39px;
-  height: 39px;
-  color: white;
 }
 
 .image-sepia {
@@ -439,46 +361,15 @@
 }
 
 .card__like-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 130px;
   height: 39px;
-  border: 2px solid var(--color);
   padding: 9px 17px;
   background: transparent;
-  cursor: pointer;
   margin: 2px -1px 0 0;
 }
 
-.card__like-button:focus-visible {
-  border: 2px solid var(--color);
-  box-shadow: 2px 2px 0px var(--color);
-  outline: none;
-  transition: box-shadow ease 0.3s;
-}
-
-.card__like-button:hover .button__text {
-  color: var(--background-color);
-  animation: text ease-in-out 0.5s;
-}
-
 .card__like-button::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 0%;
   height: 36px;
-  background-color: var(--color);
-  transition: none;
-}
-
-.card__like-button:hover::after {
-  width: 100%;
-  background-color: var(--color);
-  transition: width 0.5s, background-color 0.5s ease-in-out;
 }
 
 .button__text {
@@ -488,4 +379,40 @@
   font-family: PressStart2P;
   font-size: 14px;
   font-style: normal;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color);
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px var(--color);
+  outline: none;
+  transition: box-shadow ease 0.3s;
+}
+
+.button:hover .button__text {
+  color: var(--background-color);
+  animation: text ease-in-out 0.5s;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 0%;
+  background-color: var(--color);
+  transition: none;
+}
+
+.button:hover::after {
+  width: 100%;
+  background-color: var(--color);
+  transition: width 0.5s, background-color 0.5s ease-in-out;
 }
