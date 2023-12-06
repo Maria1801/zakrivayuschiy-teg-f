@@ -3,15 +3,10 @@
 :root {
   --main-font: "Inter", sans-serif;
   --accent-font: "Press Start 2P";
-  --background-color: #000;
-  --font-variation-wght: 400;
-  --background-color: #000;
-  --color: #00cc14;
-  --background-image: repeating-linear-gradient(
-      90deg,
-      #000 0 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(180deg, #000 0 2px, transparent 2px 4px),
-    linear-gradient(180deg, #007f0c 0%, #004306 100%);
+  --background-gradient-color-1: #d3d3d3;
+  --background-gradient-color-2: #e7e7e7;
+  --background-gradient-color-3: #1a1a1a;
+  --background-image: repeating-linear-gradient(to left, var(--background-gradient-color-1) 0 2px, transparent 2px 4px),
+              repeating-linear-gradient(to bottom, var(--background-gradient-color-1) 0 2px, transparent 2px 4px),
+              repeating-linear-gradient(to bottom, var(--background-gradient-color-2) 0.01%, var(--background-gradient-color-3));
 }
