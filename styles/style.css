@@ -93,7 +93,7 @@
   animation: arrow 0.5s ease-in-out infinite;
 }
 
-.card {
+.main {
   width: clamp(375px, 50%, 1440px);
 }
 
@@ -266,14 +266,18 @@
   font-family: PressStart2P;
   font-size: 14px;
   line-height: 150%;
+  
 }
 
 .dialog_wrapper {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
   padding-bottom: 30px;
   padding-top: 32px;
+  @media (width <= 375px) {
+    gap: 20px;
+  }
 }
 
 .dialog_button {
@@ -323,6 +327,11 @@
   align-items: center;
   border: 2px solid var(--color);
   background: var(--background-color);
+  width: 357px;
+  @media (width <= 375px) {
+    width: 341px;;
+  }
+
 }
 
 .dialog:not([open]) {
@@ -335,49 +344,49 @@
   color: white;
 }
 
-.image1 {
+.image-sepia {
   filter: sepia(100%);
   z-index: 1;
   position: relative;
 }
 
-.image2 {
+.image-invert {
   filter: invert(100%);
   z-index: 1;
   position: relative;
 }
 
-.image3 {
+.image-saturate {
   filter: saturate(165%);
   z-index: 1;
   position: relative;
 }
 
-.image4 {
+.image-opacity {
   filter: opacity(50%);
   z-index: 1;
   position: relative;
 }
 
-.image5 {
+.image-blur {
   filter: blur(2px);
   z-index: 1;
   position: relative;
 }
 
-.image6 {
+.image-brightness {
   filter: brightness(150%);
   z-index: 1;
   position: relative;
 }
 
-.image7 {
+.image-hue-rotate {
   filter: hue-rotate(90deg);
   z-index: 1;
   position: relative;
 }
 
-.image8 {
+.image-sepia-contrast-brightness {
   filter: sepia(1) contrast(2) brightness(100%);
   z-index: 1;
   position: relative;
