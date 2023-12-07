@@ -240,7 +240,6 @@
 }
 
 .text_dialog {
-  color: var(--color);
   font-family: PressStart2P, Arial, sans-serif;
   font-size: 14px;
   line-height: 150%;
@@ -273,6 +272,7 @@
   align-items: center;
   border: 2px solid var(--color);
   background: var(--background-color);
+  color: var(--color);
   width: 357px;
 }
 
@@ -332,9 +332,13 @@
   position: relative;
 }
 
-.floppy {
-  width: 100%;
-  height: 100%;
+.floppy_first {
+  width: 21px;
+  height: 25px;
+}
+
+.floppy_second {
+  /* color: var(--color); */
 }
 
 .transform {
