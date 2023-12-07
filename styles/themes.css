@@ -15,6 +15,8 @@
     ),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --card-title-weight: 700;
+  --font-variation-width: 400;
 }
 
 @media (prefers-color-scheme: light) {
@@ -29,6 +31,8 @@
       ),
       repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+    --card-title-weight: 700;
+    --font-variation-width: 400;
   }
 }
 
@@ -43,6 +47,8 @@
     ),
     repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #007f0c, #004306);
+  --card-title-weight: 785;
+  --font-variation-width: 465;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,5 +63,7 @@
       ),
       repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
       linear-gradient(to bottom, #007f0c, #004306);
+    --card-title-weight: 785;
+    --font-variation-width: 465;
   }
 }
