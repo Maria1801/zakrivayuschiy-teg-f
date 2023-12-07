@@ -258,8 +258,8 @@
   background: var(--background-color);
   font-family: PressStart2P, Arial, sans-serif;
   font-size: 14px;
-  width: clamp(257px, 5vw, 293px);
   height: 38px;
+  width: 293px;
 }
 
 .dialog_button::after {
@@ -434,5 +434,9 @@
     width: 28px;
     height: 28px;
     mix-blend-mode: difference;
+  }
+
+  .dialog_button {
+    width: 257px;
   }
 }
