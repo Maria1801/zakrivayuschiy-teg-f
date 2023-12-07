@@ -30,17 +30,15 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .header {
   margin-top: 102px;
   margin-bottom: 107px;
   width: clamp(375px, 50%, 1440px);
   width: 696px;
   font-variation-settings: "wght" var(--font-variation-width, 400);
-  @media (width <= 375px) {
-    margin-bottom: 104px;
-    width: 371px;
-  }
 }
+
 .background {
   font-family: PressStart2P, Arial, sans-serif;
   height: 364px;
@@ -81,7 +79,7 @@
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   position: absolurete;
   bottom: -3px;
   left: 0;
@@ -90,7 +88,6 @@
   background-color: var(--color, #000);
   inline-size: 100%;
   scale: 0;
-
 }
 
 .theme-menu__button:focus-visible {
@@ -102,20 +99,17 @@
   transition: scale 0.3s ease;
   transform-origin: left;
   scale: 1;
-
 }
 
 .theme-menu__button:hover {
   opacity: 0.6;
   transition: opacity 0.3s ease;
-
 }
 
 .theme-menu__button:disabled {
   opacity: 0.6;
   transition: opacity 0.3s ease;
   pointer-events: none;
-
 }
 
 .theme-menu__button:disabled:before {
@@ -130,9 +124,6 @@
 .main {
   width: clamp(375px, 50%, 1440px);
   width: 696px;
-  @media (width <= 375px) {
-    width: 371px;
-  }
 }
 
 .card_icon {
@@ -182,9 +173,6 @@
   border: 2px solid var(--color);
   background: var(--background-color);
   margin-bottom: 54px; /* в соответствии с макетом */
-  @media (width <= 375px) {
-    margin-bottom: 50px;
-  }
 }
 
 @supports (-webkit-text-stroke: 1px var(--background-color)) {
@@ -219,7 +207,7 @@
 .card__title {
   padding: 4px 10px;
   font-size: 18px;
-  font-variation-settings: 'wght' var(--card-title-weight, 700);
+  font-variation-settings: "wght" var(--card-title-weight, 700);
 }
 
 .info {
@@ -238,10 +226,6 @@
   width: 696px;
   display: flex;
   justify-content: center;
-  @media (width <= 375px) {
-    width: 371px;
-    padding-bottom: 102px;
-  }
 }
 
 .button-footer {
@@ -249,12 +233,6 @@
   height: 51px;
   background-color: var(--background-color);
   gap: 8px;
-  @media (width <= 375px) {
-    flex-direction: column;
-    width: 306px;
-    height: 80px;
-    padding-top: 8px;
-  }
 }
 
 .button-footer::after {
@@ -275,9 +253,6 @@
   gap: 50px;
   padding-bottom: 30px;
   padding-top: 32px;
-  @media (width <= 375px) {
-    gap: 20px;
-  }
 }
 
 .dialog_button {
@@ -299,9 +274,6 @@
   border: 2px solid var(--color);
   background: var(--background-color);
   width: 357px;
-  @media (width <= 375px) {
-    width: 341px;
-  }
 }
 
 .dialog::backdrop {
@@ -360,20 +332,9 @@
   position: relative;
 }
 
-.floppy_first {
-  color: var(--color);
-  width: 21px;
-  height: 25px;
-  mix-blend-mode: difference;
-  @media (width <= 375px) {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-.floppy_second {
-  mix-blend-mode: difference;
-  color: var(--color);
+.floppy {
+  width: 100%;
+  height: 100%;
 }
 
 .transform {
@@ -433,4 +394,44 @@
 .button:hover::after {
   transition: transform 0.5s ease-in-out;
   transform: translateX(0);
+}
+
+@media (width <= 375px) {
+  .header {
+    margin-bottom: 104px;
+    width: 371px;
+  }
+
+  .main {
+    width: 371px;
+  }
+
+  .card-wrapper-list {
+    margin-bottom: 50px;
+  }
+
+  .footer {
+    width: 371px;
+    padding-bottom: 102px;
+  }
+
+  .button-footer {
+    flex-direction: column;
+    width: 306px;
+    height: 80px;
+    padding-top: 8px;
+  }
+
+  .dialog_wrapper {
+    gap: 20px;
+  }
+
+  .dialog {
+    width: 341px;
+  }
+
+  .floppy_first {
+    width: 28px;
+    height: 28px;
+  }
 }
