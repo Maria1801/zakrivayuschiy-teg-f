@@ -3,6 +3,9 @@
 :root {
   --main-font: "Inter", Arial, sans-serif;
   --accent-font: "Press Start 2P, Arial, sans-serif";
+  --background-color-button: #fff;
+  --background-color: #fff;
+  --color: #000;
   --background-image: repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
@@ -10,4 +13,6 @@
     ),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --card-title-weight: 700;
+  --font-variation-width: 400;
 }
