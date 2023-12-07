@@ -334,11 +334,12 @@
 
 .floppy_first {
   width: 21px;
-  height: 25px;
+  height: 21px;
 }
 
 .floppy_second {
-  /* color: var(--color); */
+  width: 40px;
+  height: 40px;
 }
 
 .transform {
