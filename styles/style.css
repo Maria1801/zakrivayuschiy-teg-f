@@ -80,14 +80,14 @@
 
 .theme-menu__button::after {
   content: "";
-  position: absolurete;
+  position: absolute;
   bottom: -3px;
   left: 0;
   display: block;
   height: 2px;
   background-color: var(--color, #000);
   inline-size: 100%;
-  scale: 0;
+  /* scale: 0; */
 }
 
 .theme-menu__button:focus-visible {
@@ -433,5 +433,6 @@
   .floppy {
     width: 28px;
     height: 28px;
+    mix-blend-mode: difference;
   }
 }
