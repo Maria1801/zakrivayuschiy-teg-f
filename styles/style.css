@@ -249,7 +249,7 @@
 .dialog_wrapper {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
   padding-bottom: 30px;
   padding-top: 32px;
 }
@@ -332,14 +332,9 @@
   position: relative;
 }
 
-.floppy_first {
+.floppy {
   width: 21px;
   height: 21px;
-}
-
-.floppy_second {
-  width: 40px;
-  height: 40px;
 }
 
 .transform {
@@ -435,7 +430,7 @@
     width: 341px;
   }
 
-  .floppy_first {
+  .floppy {
     width: 28px;
     height: 28px;
   }
