@@ -337,8 +337,11 @@
 }
 
 .floppy {
+  color: var(--color);
+  z-index: 2;
   width: 21px;
   height: 21px;
+  mix-blend-mode: difference;
 }
 
 .transform {
@@ -437,7 +440,6 @@
   .floppy {
     width: 28px;
     height: 28px;
-    mix-blend-mode: difference;
   }
 
   .dialog_button {
