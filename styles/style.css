@@ -252,7 +252,6 @@
 .dialog_wrapper {
   display: flex;
   align-items: center;
-  gap: 20px;
   padding-bottom: 30px;
   padding-top: 32px;
   padding-left: 32px;
@@ -291,50 +290,34 @@
 
 .image-sepia {
   filter: sepia(100%);
-  z-index: 1;
-  position: relative;
 }
 
 .image-invert {
   filter: invert(100%);
-  z-index: 1;
-  position: relative;
 }
 
 .image-saturate {
   filter: saturate(165%);
-  z-index: 1;
-  position: relative;
 }
 
 .image-opacity {
   filter: opacity(50%);
-  z-index: 1;
-  position: relative;
 }
 
 .image-blur {
   filter: blur(2px);
-  z-index: 1;
-  position: relative;
 }
 
 .image-brightness {
   filter: brightness(150%);
-  z-index: 1;
-  position: relative;
 }
 
 .image-hue-rotate {
   filter: hue-rotate(90deg);
-  z-index: 1;
-  position: relative;
 }
 
 .image-sepia-contrast-brightness {
   filter: sepia(1) contrast(2) brightness(100%);
-  z-index: 1;
-  position: relative;
 }
 
 .floppy {
