@@ -34,7 +34,6 @@
 .header {
   margin-top: 102px;
   margin-bottom: 107px;
-  width: clamp(375px, 50%, 1440px);
   width: 696px;
   font-variation-settings: "wght" var(--font-variation-width, 400);
 }
@@ -123,7 +122,6 @@
 }
 
 .main {
-  width: clamp(375px, 50%, 1440px);
   width: 696px;
 }
 
