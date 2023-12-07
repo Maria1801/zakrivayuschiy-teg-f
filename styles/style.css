@@ -86,8 +86,8 @@
   display: block;
   height: 2px;
   background-color: var(--color, #000);
-  inline-size: 100%;
-  /* scale: 0; */
+  inline-size: 92%;
+  scale: 0;
 }
 
 .theme-menu__button:focus-visible {
@@ -98,7 +98,7 @@
 .theme-menu__button:focus-visible::after {
   transition: scale 0.3s ease;
   transform-origin: left;
-  /* scale: 1; */
+  scale: 1;
 }
 
 .theme-menu__button:hover {
