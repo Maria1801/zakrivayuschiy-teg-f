@@ -15,7 +15,7 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
   display: flex;
@@ -34,12 +34,13 @@
 .header {
   margin-top: 102px;
   margin-bottom: 107px;
-  width: 696px;
+  width: 100%;
+  max-width: 696px;
   font-variation-settings: "wght" var(--font-variation-width, 400);
 }
 
 .background {
-  font-family: PressStart2P, Arial, sans-serif;
+  font-family: var(--accent-font), monospace;
   flex-shrink: 0;
   background-color: var(--background-color);
   display: flex;
@@ -63,9 +64,8 @@
 .theme-menu__list {
   position: relative;
   font-size: 14px;
-  padding-top: 15px;
-  padding-bottom: 11px;
-  gap: 12px;
+  padding: 25px 0 6px 20px;
+  /* gap: 8px; */
 }
 
 .theme-menu__button {
@@ -93,13 +93,13 @@
 
 .theme-menu__button:focus {
   opacity: 0.6;
-outline: none;
+  outline: none;
 }
 
 .theme-menu__button:focus::after {
   transform-origin: left;
   scale: 1;
-  outline: none;  
+  outline: none;
 }
 
 .theme-menu__button:hover {
@@ -122,7 +122,8 @@ outline: none;
 }
 
 .main {
-  width: 696px;
+  width: 100%;
+  max-width: 696px;
 }
 
 .card_icon {
@@ -146,47 +147,38 @@ outline: none;
   transition: outline 0.3s ease;
 }
 
-.card__icon-button:hover .core {
-  fill: var(--color, #000);
-}
-
-.card__icon-button:active .core {
-  fill: #ff0000;
-}
-
-.card__icon-button .main-body {
-  fill: transparent;
-  transition: fill 0.3s 0.05s;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--color, #000);
-}
-
-.card__icon-button:active .main-body {
-  fill: #ff0000;
+.card__icon-button:focus {
+  outline: none;
 }
 
 .card-wrapper-list {
   border: 2px solid var(--color);
   background: var(--background-color);
-  margin-bottom: 54px; /* в соответствии с макетом */
+  margin-bottom: 54px;
 }
 
-@supports (-webkit-text-stroke: 1px var(--background-color)) {
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(--background-color))
+) {
   .image-label {
-    font-family: PressStart2P, Arial, sans-serif;
-    font-size: 14px;
-    opacity: 0.5;
-    text-align: right;
-    padding-right: 25px;
-    margin-bottom: -40px;
-    margin-top: 28px;
-    z-index: 2;
-    position: relative;
     -webkit-text-stroke: 1px var(--background-color);
-    mix-blend-mode: hard-light;
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
   }
+}
+
+.image-label {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  opacity: 0.5;
+  text-align: right;
+  padding-right: 25px;
+  margin-bottom: -40px;
+  margin-top: 28px;
+  z-index: 2;
+  position: relative;
+  mix-blend-mode: hard-light;
 }
 
 .image_wrapper {
@@ -197,9 +189,10 @@ outline: none;
 
 .image {
   width: 100%;
-  height: 696px;
+  max-height: 696px;
+  height: 100%;
   margin-bottom: -4px;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 .card__title {
@@ -221,13 +214,15 @@ outline: none;
 
 .footer {
   padding-bottom: 105px;
-  width: 696px;
+  width: 100%;
+  max-width: 696px;
   display: flex;
   justify-content: center;
 }
 
 .button-footer {
-  width: 335px;
+  width: 100%;
+  max-width: 335px;
   height: 51px;
   background-color: var(--background-color);
   gap: 8px;
@@ -238,11 +233,12 @@ outline: none;
 }
 
 .text_dialog {
-  font-family: PressStart2P, Arial, sans-serif;
+  font-family: var(--accent-font);
   font-size: 14px;
   line-height: 150%;
   font-weight: 400;
-  width: 234px;
+  width: 100%;
+  max-width: 234px;
 }
 
 .dialog_wrapper {
@@ -256,10 +252,11 @@ outline: none;
 
 .dialog_button {
   background: var(--background-color);
-  font-family: PressStart2P, Arial, sans-serif;
+  font-family: var(--accent-font);
   font-size: 14px;
   height: 38px;
-  width: 293px;
+  width: 100%;
+  max-width: 293px;
 }
 
 .dialog_button::after {
@@ -273,11 +270,18 @@ outline: none;
   border: 2px solid var(--color);
   background: var(--background-color);
   color: var(--color);
-  width: 357px;
+  width: 100%;
+  max-width: 357px;
+  overflow: hidden;
+}
+
+::backdrop {
+  --background-color: #000;
 }
 
 .dialog::backdrop {
   background: var(--background-color);
+  opacity: 0.75;
 }
 
 .dialog:not([open]) {
@@ -333,7 +337,8 @@ outline: none;
 }
 
 .card__like-button {
-  width: 130px;
+  width: 100%;
+  max-width: 130px;
   height: 39px;
   padding: 9px 17px;
   background: transparent;
@@ -343,7 +348,7 @@ outline: none;
 .button__text {
   position: relative;
   z-index: 2;
-  font-family: PressStart2P, Arial, sans-serif;
+  font-family: var(--accent-font);
   font-size: 14px;
   font-style: normal;
   mix-blend-mode: difference;
@@ -361,9 +366,9 @@ outline: none;
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0px var(--color);
+  box-shadow: 2px 2px 0px 0px var(--color);
   transition: box-shadow ease 0.3s;
-  border:none;
+  outline: none;
 }
 
 .button::after {
@@ -383,7 +388,8 @@ outline: none;
 @media (width <= 375px) {
   .header {
     margin-bottom: 104px;
-    width: 371px;
+    width: 100%;
+    max-width: 371px;
   }
 
   .background {
@@ -391,7 +397,8 @@ outline: none;
   }
 
   .main {
-    width: 371px;
+    width: 100%;
+    max-width: 371px;
   }
 
   .card-wrapper-list {
@@ -399,15 +406,21 @@ outline: none;
   }
 
   .footer {
-    width: 371px;
+    width: 100%;
+    max-width: 371px;
     padding-bottom: 102px;
   }
 
   .button-footer {
     flex-direction: column;
-    width: 306px;
+    width: 100%;
+    max-width: 306px;
     height: 80px;
     padding-top: 8px;
+  }
+
+  .button-footer::after {
+    height: 78px;
   }
 
   .dialog_wrapper {
@@ -415,7 +428,8 @@ outline: none;
   }
 
   .dialog {
-    width: 341px;
+    width: 100%;
+    max-width: 341px;
   }
 
   .floppy {
@@ -424,6 +438,17 @@ outline: none;
   }
 
   .dialog_button {
-    width: 257px;
+    width: 100%;
+    max-width: 257px;
+  }
+
+  .image {
+    max-height: 371px;
+    height: 100%;
+  }
+
+  .header__title {
+    font-size: 14px;
+    font-weight: 400;
   }
 }
