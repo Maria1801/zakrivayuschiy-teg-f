@@ -18,7 +18,6 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  font-variation-settings: "wght" var(--font-variation-width, 400);
   display: flex;
   place-items: center;
   flex-direction: column;
@@ -29,6 +28,7 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 .header {
@@ -40,7 +40,6 @@
 
 .background {
   font-family: PressStart2P, Arial, sans-serif;
-  height: 364px;
   flex-shrink: 0;
   background-color: var(--background-color);
   display: flex;
@@ -48,6 +47,7 @@
   align-items: center;
   justify-content: flex-end;
   border: 2px solid var(--color, #00cc14);
+  padding-top: 136px;
 }
 
 .logo-header {
@@ -76,6 +76,7 @@
   cursor: pointer;
   text-transform: uppercase;
   position: relative;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -90,20 +91,19 @@
   scale: 0;
 }
 
-.theme-menu__button:focus-visible {
+.theme-menu__button:focus {
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+outline: none;
 }
 
-.theme-menu__button:focus-visible::after {
-  transition: scale 0.3s ease;
+.theme-menu__button:focus::after {
   transform-origin: left;
   scale: 1;
+  outline: none;  
 }
 
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled {
@@ -129,7 +129,6 @@
   padding-bottom: 25px;
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
   padding-right: 25px;
 }
 
@@ -198,9 +197,9 @@
 
 .image {
   width: 100%;
-  max-height: 100%;
-  background-size: cover;
+  height: 696px;
   margin-bottom: -4px;
+  object-fit:cover;
 }
 
 .card__title {
@@ -221,7 +220,7 @@
 }
 
 .footer {
-  padding-bottom: 105px; /* в соответствии с макетом */
+  padding-bottom: 105px;
   width: 696px;
   display: flex;
   justify-content: center;
@@ -242,9 +241,8 @@
   font-family: PressStart2P, Arial, sans-serif;
   font-size: 14px;
   line-height: 150%;
-  font-variation-settings: "wght" var(--font-variation-width, 400);
+  font-weight: 400;
   width: 234px;
-  height: 63px;
 }
 
 .dialog_wrapper {
@@ -342,10 +340,6 @@
   margin: 2px -1px 0 0;
 }
 
-.card__like-button::after {
-  height: 36px;
-}
-
 .button__text {
   position: relative;
   z-index: 2;
@@ -369,6 +363,7 @@
 .button:focus-visible {
   box-shadow: 2px 2px 0px var(--color);
   transition: box-shadow ease 0.3s;
+  border:none;
 }
 
 .button::after {
@@ -389,6 +384,10 @@
   .header {
     margin-bottom: 104px;
     width: 371px;
+  }
+
+  .background {
+    padding-top: 120px;
   }
 
   .main {
