@@ -141,6 +141,7 @@
   border-color: transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
+  gap: 12px;
 }
 
 .card__icon-button:focus-visible {
