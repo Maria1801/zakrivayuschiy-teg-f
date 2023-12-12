@@ -32,9 +32,9 @@
 
 .header {
   margin-top: 102px;
-  margin-bottom: 100px;
+  margin-bottom: 103px;
   width: 100%;
-  max-width: 696px;
+  max-width: 700px;
   min-width: 350px;
 }
 
@@ -74,7 +74,6 @@
   cursor: pointer;
   text-transform: uppercase;
   position: relative;
-  overflow: hidden;
 }
 
 .theme-menu__button::after {
@@ -85,8 +84,9 @@
   display: block;
   background-color: var(--color, #000);
   inline-size: 92%;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(-100%);
+  scale: 0;
+  transition: scale 0.3s ease-in-out;
+  transform-origin: left;
 }
 
 .theme-menu__button:focus {
@@ -95,9 +95,10 @@
 }
 
 .theme-menu__button:focus-visible::after {
+  scale: 1;
   outline: none;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(0);
+  transition: scale 0.3s ease-in-out;
+  transform-origin: left;
 }
 
 .theme-menu__button:hover {
@@ -183,6 +184,7 @@
   mix-blend-mode: hard-light;
   text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
     1px 0 var(--background-color), 0 -1px var(--background-color);
+  font-variation-settings: "wght" var(--font-variation-width);
 }
 
 .image_wrapper {
@@ -231,7 +233,7 @@
 
 .button-footer {
   width: 100%;
-  max-width: 335px;
+  max-width: 339px;
   height: 51px;
   background-color: var(--background-color);
   gap: 8px;
@@ -338,8 +340,10 @@
 }
 
 .card__like-button {
+  top: 2px;
   width: 100%;
   max-width: 130px;
+  height: 38px;
   background: transparent;
 }
 
@@ -385,7 +389,7 @@
 
 @media (width <= 375px) {
   .header {
-    margin-bottom: 104px;
+    margin-bottom: 100px;
     inline-size: 100%;
     min-block-size: 323px;
   }
@@ -412,8 +416,8 @@
   .button-footer {
     flex-direction: column;
     width: 100%;
-    max-width: 306px;
-    height: 80px;
+    max-width: 310px;
+    height: 82px;
     padding-top: 8px;
   }
 
