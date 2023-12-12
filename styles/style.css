@@ -255,8 +255,9 @@
   align-items: center;
   padding-bottom: 30px;
   padding-top: 32px;
-  padding-left: 32px;
+  padding-left: 15px;
   padding-right: 32px;
+  gap: 10px;
 }
 
 .dialog_button {
