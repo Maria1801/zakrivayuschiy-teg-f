@@ -133,6 +133,7 @@
   padding-right: 25px;
 }
 
+
 .card__icon-button {
   height: 100%;
   max-height: 38px;
@@ -141,8 +142,6 @@
   border-color: transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
-  display: flex;
-  gap: 7px;
 }
 
 .card__icon-button:focus-visible {
