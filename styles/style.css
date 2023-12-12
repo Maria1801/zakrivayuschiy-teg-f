@@ -123,7 +123,7 @@
 
 .main {
   width: 100%;
-  max-width: 696px; 
+  max-width: 696px;
   min-width: 350px;
 }
 
@@ -183,12 +183,8 @@
   z-index: 2;
   position: relative;
   mix-blend-mode: hard-light;
-  text-shadow:
-  -1px 0 var(--background-color),
-  0 1px var(--background-color),
-  1px 0 var(--background-color),
-  0 -1px var(--background-color);
-
+  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
+    1px 0 var(--background-color), 0 -1px var(--background-color);
 }
 
 .image_wrapper {
@@ -196,9 +192,9 @@
   outline: 2px solid var(--color);
   position: relative;
   height: 100vw;
- max-height: 696px;
+  max-height: 696px;
   width: 100%;
-  max-width: 696vw; 
+  max-width: 696vw;
 }
 
 .image {
@@ -449,12 +445,12 @@
   }
 
   .image_wrapper {
-   outline: none;
-   border-top: 2px solid var(--color);
-   border-bottom: 2px solid var(--color);
-   max-width: 375px;
-   width: 100%;
-   max-height: 375px;
+    outline: none;
+    border-top: 2px solid var(--color);
+    border-bottom: 2px solid var(--color);
+    max-width: 375px;
+    width: 100%;
+    max-height: 375px;
     height: 100%;
   }
 }
