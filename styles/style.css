@@ -70,24 +70,23 @@
   outline: none;
   border: none;
   background: transparent;
-  margin-bottom: 14px;
+  padding-bottom: 14px;
   cursor: pointer;
   text-transform: uppercase;
   position: relative;
-  transition: opacity 0.3s ease;
+  overflow: hidden;
 }
 
 .theme-menu__button::after {
   content: "";
   position: absolute;
-  bottom: -3px;
   left: 0;
+  height: 2px;
   display: block;
   background-color: var(--color, #000);
   inline-size: 92%;
-  scale: 0;
-  transition: scale 0.3s ease-in-out;
-  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
 }
 
 .theme-menu__button:focus {
@@ -96,10 +95,9 @@
 }
 
 .theme-menu__button:focus-visible::after {
-  scale: 1;
   outline: none;
-  transform-origin: left;
-  transition: scale 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
 }
 
 .theme-menu__button:hover {
@@ -309,7 +307,6 @@
 
 .image-blur {
   filter: blur(2px);
-  /* overflow: hidden; */
 }
 
 .image-brightness {
