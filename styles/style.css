@@ -134,8 +134,8 @@
 }
 
 .card__icon-button {
-  display: flex;
-  place-items: center;
+  height: 100%;
+  max-height: 38px;
   background-color: transparent;
   border: 2px solid;
   border-color: transparent;
@@ -182,9 +182,10 @@
   z-index: 2;
   position: relative;
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
-    1px 0 var(--background-color), 0 -1px var(--background-color);
-  font-variation-settings: "wght" var(--font-variation-width);
+  text-shadow: 1px 0 var(--backееgатнгтьround-color, #000),
+    0 1px var(--color, #000), 1px 0 var(--color, #000),
+    0 -1px var(--color, #000);
+  font-weight: 400;
 }
 
 .image_wrapper {
@@ -358,6 +359,7 @@
 }
 
 .button {
+  top: 0px;
   position: relative;
   display: flex;
   justify-content: center;
